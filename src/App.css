@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.App {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: 75px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Oswald', sans-serif;
+  background: url('./images/gradient.jpg');
+  background-size: cover;
+}
+
+.form-style{
+  width: 85%;
+  max-width: 600px;
+  position: absolute;
+  background-color: #809BAD;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 40px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 20px #000000b3;
+}
+
+.form-style h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  text-decoration: underline;
+  color: whitesmoke;
+}
+label {
+  display: block;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.name-input {
+  border: 1px solid grey;
+  margin: 8px 0;
+  padding: 12px 18px;
+  border-radius: 8px;
+}
+
+.email-input {
+  border: 1px solid grey;
+  margin: 8px 0;
+  padding: 12px 18px;
+  border-radius: 8px;
+}
+
+.message-input {
+  border: 1px solid grey;
+  margin: 8px 0;
+  padding: 12px 18px;
+  border-radius: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.btn-style{
+  display: inline-block;
+  background-color: whitesmoke;
+  padding: 14px 0;
+  color: #8DDAC8;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  width: 100%;
+  border-radius: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+}
