@@ -42,21 +42,21 @@ label {
 }
 
 .name-input {
-  border: 1px solid grey;
+  border: 1px solid whitesmoke;
   margin: 8px 0;
   padding: 12px 18px;
   border-radius: 8px;
 }
 
 .email-input {
-  border: 1px solid grey;
+  border: 1px solid whitesmoke;
   margin: 8px 0;
   padding: 12px 18px;
   border-radius: 8px;
 }
 
 .message-input {
-  border: 1px solid grey;
+  border: 1px solid whitesmoke;
   margin: 8px 0;
   padding: 12px 18px;
   border-radius: 8px;
@@ -83,4 +83,8 @@ input, textarea {
   border-radius: 5px;
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
+}
+
+.error-message {
+  color: red;
 }

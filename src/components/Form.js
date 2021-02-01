@@ -1,5 +1,6 @@
 //imports------
 import {useFormik} from 'formik'
+import axios from 'axios'
 
 
 //Validation function 
@@ -36,7 +37,17 @@ const Form = () => {
     validate,
     onSubmit: values => {
       //submit to aws email api
-      alert(JSON.stringify(values))
+      //using axios for the post mtehod
+      // await axios.post('https://anxxtrd3td.execute-api.us-west-1.amazonaws.com/sendEmail'), {values}
+      // alert(JSON.stringify(values))
+      axios.post('https://anxxtrd3td.execute-api.us-west-1.amazonaws.com/sendEmail/send-email', {values})
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      })
     }
   })
 
@@ -53,7 +64,7 @@ const Form = () => {
             onChange={formik.handleChange}
             value={formik.values.name}
           />
-          {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+          {formik.errors.name ? <div className='error-message'>{formik.errors.name}</div> : null}
         </div>
         <div className='email-input'>
           <label>Email: </label>
@@ -64,7 +75,7 @@ const Form = () => {
             onChange={formik.handleChange}
             value={formik.values.email}
           />
-          {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+          {formik.errors.email ? <div className='error-message'>{formik.errors.email}</div> : null}
         </div>
         <div className='message-input'>
           <label>Message: </label>
@@ -76,7 +87,7 @@ const Form = () => {
             value={formik.values.message}
           />
         </div>
-        {formik.errors.message ? <div>{formik.errors.message}</div> : null}
+        {formik.errors.message ? <div className='error-message'>{formik.errors.message}</div> : null}
         <button className='btn-style'type='submit'>Send Messaged</button>
       </form>
     </div>
